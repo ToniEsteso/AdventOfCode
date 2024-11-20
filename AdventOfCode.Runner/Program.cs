@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using AdventOfCode.Library;
 using AdventOfCode.Library.Extensions;
+using AdventOfCode.Runner;
 
 var assembly = Assembly.GetAssembly(typeof(BaseDay));
 var types = assembly.GetTypes()
@@ -8,7 +9,11 @@ var types = assembly.GetTypes()
 
 var days = types.Select(t => (BaseDay)Activator.CreateInstance(t));
 
-var results= days.SelectToReadOnlyList(d => d.RunTests())
+var results= days.Select(d => d.RunTests())
     .OrderBy(s => s[0].BaseDay.Year)
-    .ThenBy(s => s[0].BaseDay.Day);
+    .ThenBy(s => s[0].BaseDay.Day)
+    .ToList();
+
+results.ForEach(ResultPrinter.PrintResult);
+;
 Console.ReadLine();
