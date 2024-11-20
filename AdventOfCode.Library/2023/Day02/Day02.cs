@@ -4,6 +4,10 @@ namespace AdventOfCode.Library._2023;
 
 public partial class Day02 : BaseDay
 {
+    public override int Day => 1;
+    
+    public override int Year => 2023;
+    
     public override int SolvePart1(string input)
     {
         var lines = input.SplitIntoLines();

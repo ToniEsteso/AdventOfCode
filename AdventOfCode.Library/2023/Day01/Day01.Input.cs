@@ -2,7 +2,7 @@ namespace AdventOfCode.Library._2023;
 
 public partial class Day01
 {
-    public override string Input => @"zlmlk1
+    protected override string Input => @"zlmlk1
 vqjvxtc79mvdnktdsxcqc1sevenone
 vsskdclbtmjmvrseven6
 8jkfncbeight7seven8
