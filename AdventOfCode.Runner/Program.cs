@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using AdventOfCode.Library;
-using AdventOfCode.Library.Extensions;
 using AdventOfCode.Runner;
 
 var assembly = Assembly.GetAssembly(typeof(BaseDay));

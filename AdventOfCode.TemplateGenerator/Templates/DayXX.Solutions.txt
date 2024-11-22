@@ -1,0 +1,7 @@
+﻿namespace AdventOfCode.Library._{{YearNumber}};
+
+public partial class Day{{DayNumber}}
+{
+    protected override int SolutionPart1 => {{SolutionPart1}};
+    protected override int SolutionPart2 => {{SolutionPart2}};
+}

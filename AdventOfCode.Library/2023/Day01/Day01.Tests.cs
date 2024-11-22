@@ -1,5 +1,3 @@
-using Xunit;
-
 namespace AdventOfCode.Library._2023;
 
 public partial class Day01

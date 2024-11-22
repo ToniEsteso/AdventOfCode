@@ -1,6 +1,6 @@
-namespace AdventOfCode.Library._2023;
+﻿namespace AdventOfCode.Library._{{YearNumber}};
 
-public partial class Day02
+public partial class Day{{DayNumber}}
 {
     protected override IEnumerable<TestCase> ExtraTests()
     {

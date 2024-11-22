@@ -1,0 +1,6 @@
+﻿namespace AdventOfCode.Library._{{YearNumber}};
+
+public partial class Day{{DayNumber}}
+{
+    protected override string Input => @"{{Input}}";
+}
