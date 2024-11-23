@@ -1,10 +1,10 @@
-﻿namespace AdventOfCode.Library._{{YearNumber}};
+namespace AdventOfCode.Library._2023;
 
-public partial class Day{{DayNumber}} : BaseDay
+public partial class Day03 : BaseDay
 {
-    public override Day Day => Day.Day{{DayNumber}};
+    public override Day Day => Day.Day03;
     
-    public override Year Year => Year.Year{{YearNumber}};
+    public override Year Year => Year.Year2023;
 
     public override int SolvePart1(string input)
     {

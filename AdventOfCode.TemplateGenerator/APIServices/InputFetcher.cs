@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode.TemplateGenerator.APIServices;
+﻿using AdventOfCode.Library;
+
+namespace AdventOfCode.TemplateGenerator.APIServices;
 
 public class InputFetcher
 {
@@ -10,9 +12,9 @@ public class InputFetcher
         _httpClient = httpClient;
     }
 
-    public async Task<string> FetchInputAsync(int year, int day)
+    public async Task<string> FetchInputAsync(Year year, Day day)
     {
-        string url = $"https://adventofcode.com/{year}/day/{day}/input";
+        var url = $"https://adventofcode.com/{(int)year}/day/{(int)day}/input";
         _httpClient.DefaultRequestHeaders.Add("Cookie", $"session={_cookie}"); // Add your session cookie
         var response = await _httpClient.GetAsync(url);
 

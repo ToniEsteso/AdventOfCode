@@ -29,7 +29,7 @@ public class TestResult
 
     public static TestResult Create(TestCase testCase, BaseDay day)
     {
-        foreach (var i in 1.To(5))
+        foreach (var _ in 1.To(5))
         {
             testCase.Solver(testCase.Input);
         }

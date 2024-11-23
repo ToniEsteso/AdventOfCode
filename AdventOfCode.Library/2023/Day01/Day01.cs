@@ -4,9 +4,9 @@ namespace AdventOfCode.Library._2023;
 
 public partial class Day01 : BaseDay
 {
-    public override int Day => 1;
+    public override Day Day => Day.Day01;
     
-    public override int Year => 2023;
+    public override Year Year => Year.Year2023;
 
     public override int SolvePart1(string input)
     {

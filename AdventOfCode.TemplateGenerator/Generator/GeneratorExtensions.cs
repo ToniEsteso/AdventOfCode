@@ -1,10 +1,12 @@
-﻿namespace AdventOfCode.TemplateGenerator;
+﻿using AdventOfCode.Library;
+
+namespace AdventOfCode.TemplateGenerator;
 
 public static class GeneratorExtensions
 {
-    public static string ReplaceYear(this string template, int year) => template.Replace("{{YearNumber}}", year.ToString());
+    public static string ReplaceYear(this string template, Year year) => template.Replace("{{YearNumber}}", ((int)year).ToString());
     
-    public static string ReplaceDay(this string template, int day) => template.Replace("{{DayNumber}}", day.ToString());
+    public static string ReplaceDay(this string template, Day day) => template.Replace("{{DayNumber}}", ((int)day).ToString("D2"));
     
     public static string ReplaceInput(this string template, string input) => template.Replace("{{Input}}", input);
 

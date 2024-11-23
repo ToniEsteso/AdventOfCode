@@ -1,4 +1,6 @@
-﻿namespace AdventOfCode.TemplateGenerator.APIServices;
+﻿using AdventOfCode.Library;
+
+namespace AdventOfCode.TemplateGenerator.APIServices;
 
 public class SolutionFetcher
 {
@@ -9,9 +11,9 @@ public class SolutionFetcher
         _httpClient = httpClient;
     }
 
-    public async Task<int> FetchSolutionAsync(int year, int day, int part, string input)
+    public async Task<int> FetchSolutionAsync(Year year, Day day, Part part, string input)
     {
-        var url = $"https://advent.fly.dev/solve/{year}/{day}/{part}";
+        var url = $"https://advent.fly.dev/solve/{(int)year}/{(int)day}/{(int)part}";
         var content = new StringContent(input);
 
         var response = await _httpClient.PostAsync(url, content);

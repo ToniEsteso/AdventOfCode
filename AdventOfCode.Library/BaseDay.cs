@@ -4,8 +4,10 @@ namespace AdventOfCode.Library;
 
 public abstract partial class BaseDay
 {
-    public abstract int Day { get; }
-    public abstract int Year { get; }
+    public abstract Day Day { get; }
+
+    public abstract Year Year { get; }
+
     public abstract int SolvePart1(string input);
     
     public abstract int SolvePart2(string input);
