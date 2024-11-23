@@ -11,8 +11,9 @@ public static class ResultPrinter
         foreach (var testResult in resultsForDay)
         {
             Console.WriteLine(testResult.TestCase.TestName);
-            Console.WriteLine($"Time ellapsed: {FormatTimeSpan(testResult.Duration)}");
-            Console.WriteLine($"Memory used: {FormatMemory(testResult.MemoryUsed)}");
+            Console.WriteLine($"  Success: {testResult.IsSuccess}");
+            Console.WriteLine($"  Time ellapsed: {FormatTimeSpan(testResult.Duration)}");
+            Console.WriteLine($"  Memory used: {FormatMemory(testResult.MemoryUsed)}");
         }
     }
     
